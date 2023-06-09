@@ -13,3 +13,23 @@ Récompense : la récompense (reward) est la valeur reçue après avoir effectu�
 
 Max : np.max() utilise la bibliothèque numpy et prend le maximum de la récompense future et l’applique à la récompense de l’état actuel. Cela a pour effet d’influencer l’action actuelle par la récompense future possible. En effet, grâce au Q-learning, nous sommes capables d’allouer la récompense future aux actions actuelles pour aider l’agent à sélectionner l’action la plus rentable à tout état donné.
 
+## Processus d’apprentissage du Q-Learning
+L’exemple de jeu suivant vous aidera à comprendre le concept de Q-learning :
+
+### Initialisation
+Votre agent, lorsqu’il jouera pour la première fois au jeu, n’aura aucune connaissance. Nous supposerons donc que la table Q est égale à zéro.
+
+2. Exploration ou exploitation
+Au cours de cette étape, votre agent choisira n’importe qui parmi les deux possibilités. Si l’agent exploite, il recueillera des informations à partir de la table des questions, ou lorsqu’il explore, il essaiera de trouver de nouveaux moyens.
+– Lorsque votre agent travaille pour un nombre plus élevé pendant un certain temps, il est essentiel d’exploiter.
+– Lorsque votre agent n’a aucune expérience, l’exploration est essentielle.
+Vous pouvez gérer les ajustements entre deux conditions, l’exploration et l’exploitation, en ajoutant un epsilon. Incluez l’epsilon dans la fonction de valeur. Lorsque nous commençons avec le modèle et que nous n’incluons aucune information, vous devez préférer l’exploration. Cependant, une fois que votre modèle commence à s’adapter à l’environnement, vous devez suivre l’exploitation. En termes simples, l’agent prendra des mesures à l’étape deux, et les choix sont l’exploration et l’exploitation.
+
+3. Mesurer la récompense
+Lorsque l’agent décide de l’action à choisir, il agit. Cela conduit l’agent à l’étape suivante, qui est l’état “S”. Dans cet état, l’agent effectue quatre actions. Chacune de ces actions dirigera l’agent vers différents scores de récompense. Par exemple, si l’agent choisit l’état 5 à partir de l’état 1, il ira plus loin en fonction de l’expérience de cet état. L’agent peut alors choisir de passer à l’état 6 ou à l’état 9 en fonction de l’expérience antérieure et de l’éventuelle attente de récompense.
+
+4. Mise à jour du tableau Q
+L’agent calculera la valeur de la récompense. L’algorithme utilisera l’équation de Bellman pour mettre à jour la valeur à l’État “S”. Voici quelques terminologies
+Taux d’apprentissage – Le taux d’apprentissage est une constante qui détermine le poids que vous devez ajouter dans la table des questions pour générer une nouvelle valeur au lieu de l’ancienne.
+Taux d’actualisation – Le taux d’actualisation est la constante. Il permet d’escompter ce que sera la future récompense. En termes simples, le taux d’actualisation aide à équilibrer l’effet des récompenses à venir sur les nouvelles valeurs.
+Une fois que l’agent a franchi toutes ces étapes en apprenant de manière significative, il obtiendra des valeurs actualisées sur la table Q. Maintenant, il est simple d’utiliser la table Q pour cartographier les états. Chaque agent d’état sélectionnera une action qui le mènera à l’état ayant la valeur Q la plus élevée.

@@ -6,7 +6,10 @@ Q-learning est une technique d'apprentissage par renforcement qui permet à un a
 
 ## Quelques Références 
 Taux d’apprentissage : lr, souvent appelé alpha, peut être défini comme le degré d’acceptation de la nouvelle valeur par rapport à l’ancienne. Ci-dessus, nous prenons la différence entre la nouvelle et l’ancienne valeur, puis nous multiplions cette valeur par le taux d’apprentissage. Cette valeur est ensuite ajoutée à notre valeur q précédente, ce qui la fait évoluer dans la direction de notre dernière mise à jour.
+
 Gamma : gamma ou γ est un facteur d’actualisation. Il est utilisé pour équilibrer la récompense immédiate et future. Dans notre règle de mise à jour ci-dessus, vous pouvez voir que nous appliquons la décote à la récompense future. En général, cette valeur peut varier entre 0,8 et 0,99.
-Récompense : la récompense (reward) est la valeur reçue après avoir effectué une certaine action à un état donné. Une récompense peut survenir à n’importe quel pas de temps donné ou seulement au pas de temps terminal.
+
+Récompense : la récompense (reward) est la valeur reçue après avoir effectué une certaine action à un état donné. Une récompense peut survenir à n’importe quel pas de temps donné ou seulement au pas de temps terminal
+
 Max : np.max() utilise la bibliothèque numpy et prend le maximum de la récompense future et l’applique à la récompense de l’état actuel. Cela a pour effet d’influencer l’action actuelle par la récompense future possible. En effet, grâce au Q-learning, nous sommes capables d’allouer la récompense future aux actions actuelles pour aider l’agent à sélectionner l’action la plus rentable à tout état donné.
 

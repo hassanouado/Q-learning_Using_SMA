@@ -35,8 +35,8 @@ L’agent calculera la valeur de la récompense. L’algorithme utilisera l’é
 
  Cette fonction est responsable de réinitialiser les valeurs des variables stateI et stateJ à zéro.
  #### chooseAction(double epsilon)
-Cette fonction![Capture4002](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/5e9cbbc7-69df-4212-ba68-0e25f085a241)
- permet à l'agent de choisir une action à effectuer. Elle prend un paramètre epsilon qui détermine la probabilité d'exploration. Si un nombre aléatoire généré est inférieur à epsilon, l'agent effectue une exploration et choisit une action aléatoire parmi toutes les actions disponibles. Sinon, il effectue une exploitation et choisit l'action ayant la plus grande valeur Q pour l'état actuel de l'agent.
+![Capture4002](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/5e9cbbc7-69df-4212-ba68-0e25f085a241)
+ Cette fonctionpermet à l'agent de choisir une action à effectuer. Elle prend un paramètre epsilon qui détermine la probabilité d'exploration. Si un nombre aléatoire généré est inférieur à epsilon, l'agent effectue une exploration et choisit une action aléatoire parmi toutes les actions disponibles. Sinon, il effectue une exploitation et choisit l'action ayant la plus grande valeur Q pour l'état actuel de l'agent.
  #### finished()
  ![Capture4003](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/cd43db65-1f70-45ad-b578-f867005dbf08)
 

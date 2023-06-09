@@ -17,6 +17,7 @@ Max : np.max() utilise la bibliothèque numpy et prend le maximum de la récompe
 
 ### Initialisation
 Votre agent, lorsqu’il jouera pour la première fois au jeu, n’aura aucune connaissance. Nous supposerons donc que la table Q est égale à zéro.
+![Capture4001](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/bcbbda31-6e46-43fd-b801-8989a53f9150)
 
 ### Exploration ou exploitation
 Au cours de cette étape, votre agent choisira n’importe qui parmi les deux possibilités. Si l’agent exploite, il recueillera des informations à partir de la table des questions, ou lorsqu’il explore, il essaiera de trouver de nouveaux moyens.
@@ -30,16 +31,29 @@ Lorsque l’agent décide de l’action à choisir, il agit. Cela conduit l’ag
 L’agent calculera la valeur de la récompense. L’algorithme utilisera l’équation de Bellman pour mettre à jour la valeur à l’État “S”.
 ## les fonction qui j'ai utilise
  #### resetState()
+ ![Capture4003](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/87127613-f3e7-47b1-87cd-9b9e4c7f4ec9)
+
  Cette fonction est responsable de réinitialiser les valeurs des variables stateI et stateJ à zéro.
  #### chooseAction(double epsilon)
-Cette fonction permet à l'agent de choisir une action à effectuer. Elle prend un paramètre epsilon qui détermine la probabilité d'exploration. Si un nombre aléatoire généré est inférieur à epsilon, l'agent effectue une exploration et choisit une action aléatoire parmi toutes les actions disponibles. Sinon, il effectue une exploitation et choisit l'action ayant la plus grande valeur Q pour l'état actuel de l'agent.
+Cette fonction![Capture4002](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/5e9cbbc7-69df-4212-ba68-0e25f085a241)
+ permet à l'agent de choisir une action à effectuer. Elle prend un paramètre epsilon qui détermine la probabilité d'exploration. Si un nombre aléatoire généré est inférieur à epsilon, l'agent effectue une exploration et choisit une action aléatoire parmi toutes les actions disponibles. Sinon, il effectue une exploitation et choisit l'action ayant la plus grande valeur Q pour l'état actuel de l'agent.
  #### finished()
+ ![Capture4003](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/cd43db65-1f70-45ad-b578-f867005dbf08)
+
 Cette fonction "finished()" vérifie si l'agent a atteint un état final sur l'île, c'est-à-dire s'il est arrivé à une zone de récompense. 
  #### executeAction(int action)
+ ![Capture4005](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/98e9bb49-74b8-409c-90c5-41c9ed1af33a)
+
  cette fonction utilise Math.min et Math.max pour s'assurer que les valeurs de stateI et stateJ restent dans les limites de la grille (0 à GLUtils.GRID_SIZE - 1). Cela permet de mettre à jour les coordonnées de l'état actuel de manière plus concise et lisible.
  #### printBestPath()
+ ![Capture4007](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/2f6c87a7-5ca2-41a3-b3a7-b55cd316aa28)
+
  cette fonction  permettre d'afficher les résultats et les actions dans votre Algorithme.
  #### runQLearning()
+ ![Capture4008](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/2f572854-5019-4b5c-83b3-61cb188f25e6)
+
  cette fonction permet d'exécuter le processus d'apprentissage par renforcement et de mettre à jour la table Q en fonction des interactions de l'agent avec l'environnement.
  #### sendQTable()
+ ![Capture4009](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/349af81f-b0aa-433f-9b7b-e5cbffd15888)
+
  La fonction sendQTable est utilisée pour envoyer la table Q à d'autres agents qui offrent le service de Q-Learning.

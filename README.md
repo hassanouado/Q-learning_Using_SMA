@@ -28,4 +28,18 @@ Vous pouvez gérer les ajustements entre deux conditions, l’exploration et l�
 Lorsque l’agent décide de l’action à choisir, il agit. Cela conduit l’agent à l’étape suivante, qui est l’état “S”. Dans cet état, l’agent effectue quatre actions. Chacune de ces actions dirigera l’agent vers différents scores de récompense. 
 ### Mise à jour du tableau Q
 L’agent calculera la valeur de la récompense. L’algorithme utilisera l’équation de Bellman pour mettre à jour la valeur à l’État “S”.
-
+## les fonction qui j'ai utilise
+ #### resetState()
+ Cette fonction est responsable de réinitialiser les valeurs des variables stateI et stateJ à zéro.
+ #### chooseAction(double epsilon)
+Cette fonction permet à l'agent de choisir une action à effectuer. Elle prend un paramètre epsilon qui détermine la probabilité d'exploration. Si un nombre aléatoire généré est inférieur à epsilon, l'agent effectue une exploration et choisit une action aléatoire parmi toutes les actions disponibles. Sinon, il effectue une exploitation et choisit l'action ayant la plus grande valeur Q pour l'état actuel de l'agent.
+ #### finished()
+Cette fonction "finished()" vérifie si l'agent a atteint un état final sur l'île, c'est-à-dire s'il est arrivé à une zone de récompense. 
+ #### executeAction(int action)
+ cette fonction utilise Math.min et Math.max pour s'assurer que les valeurs de stateI et stateJ restent dans les limites de la grille (0 à GLUtils.GRID_SIZE - 1). Cela permet de mettre à jour les coordonnées de l'état actuel de manière plus concise et lisible.
+ #### printBestPath()
+ cette fonction  permettre d'afficher les résultats et les actions dans votre Algorithme.
+ #### runQLearning()
+ cette fonction permet d'exécuter le processus d'apprentissage par renforcement et de mettre à jour la table Q en fonction des interactions de l'agent avec l'environnement.
+ #### sendQTable()
+ La fonction sendQTable est utilisée pour envoyer la table Q à d'autres agents qui offrent le service de Q-Learning.

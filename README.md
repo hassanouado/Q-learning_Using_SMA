@@ -57,3 +57,6 @@ Cette fonction "finished()" vérifie si l'agent a atteint un état final sur l'�
  ![Capture4009](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/349af81f-b0aa-433f-9b7b-e5cbffd15888)
 
  La fonction sendQTable est utilisée pour envoyer la table Q à d'autres agents qui offrent le service de Q-Learning.
+ ### les resultat de l'algorithm en utilise SMA
+ ![carbon (6)](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/618362ad-d6cf-4c68-9c32-c9a44263030b)
+

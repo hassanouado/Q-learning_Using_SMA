@@ -2,7 +2,7 @@
 ## c'est quoi Q-learning Algorithme 
 Q-learning est une technique d'apprentissage par renforcement qui permet à un agent d'apprendre à prendre des décisions dans un environnement basé sur des récompenses. L'agent utilise une table de valeurs Q pour estimer la valeur attendue d'une action dans un état donné. Cette table est mise à jour à chaque itération de l'algorithme en utilisant la formule de mise à jour Q.
 
-    ![1_4u2GtNnMa9xso1WkLh7hVA](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/8207c6f9-874c-4943-8008-b266686b6c3c)
+   ![1_4u2GtNnMa9xso1WkLh7hVA](https://github.com/hassanouado/Q-learning_Using_SMA/assets/95369534/8207c6f9-874c-4943-8008-b266686b6c3c)
 
 ## Quelques Références 
 Taux d’apprentissage : lr, souvent appelé alpha, peut être défini comme le degré d’acceptation de la nouvelle valeur par rapport à l’ancienne. Ci-dessus, nous prenons la différence entre la nouvelle et l’ancienne valeur, puis nous multiplions cette valeur par le taux d’apprentissage. Cette valeur est ensuite ajoutée à notre valeur q précédente, ce qui la fait évoluer dans la direction de notre dernière mise à jour.
